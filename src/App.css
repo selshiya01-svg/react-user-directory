@@ -1,0 +1,51 @@
+:root {
+  --bg: #f6f3ee;
+  --card: #ffffff;
+  --ink: #26233a;
+  --muted: #6b6880;
+  --accent: #4b3fb3;
+  --line: #ddd8e8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.page { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+h1 { margin: 0 0 16px; font-size: 1.9rem; }
+
+.search {
+  width: 100%;
+  max-width: 380px;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.search:focus-visible { outline: 3px solid #b7b0ee; outline-offset: 2px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.card h2 { margin: 0 0 6px; font-size: 1.1rem; }
+.card p { margin: 2px 0; color: var(--muted); font-size: 0.95rem; }
+.card .company { color: var(--accent); font-weight: 600; }
+
+.status { color: var(--muted); }
+.error { color: #a33a2f; }
